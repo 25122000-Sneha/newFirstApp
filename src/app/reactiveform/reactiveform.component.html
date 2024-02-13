@@ -1,0 +1,77 @@
+
+
+<form [formGroup] = 'form'>
+    <div class="form-group">
+        <label>Full Name</label>
+        <input
+        type="text"
+        class="form-control"
+        name="fullName"
+        formControlName="fullName">
+        <div *ngIf="fullName.errors?.['required']">
+            <div class="alert alert-danger"
+                *ngIf="fullName.touched && fullName.invalid">  
+                Full Name required 
+
+            </div>
+        </div>
+        <div *ngIf="fullName.errors?.['minlength']">
+            <div class="alert alert-danger"
+                *ngIf="fullName.touched && fullName.invalid">  
+                Full Name not meeting minimum length 
+
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input 
+        email
+        type="text"
+        class="form-control"
+        name="email"
+        formControlName="email">
+        <div *ngIf="email.errors?.['required']">
+            <div class="alert alert-danger"
+                *ngIf="email.touched &&  email.invalid">
+                Email Required
+            </div>
+        </div>
+        <div *ngIf="email.errors?.['minlength']">
+            <div class="alert alert-danger"
+                *ngIf="email.touched && email.invalid">  
+                Email not meeting minimum length 
+            </div>
+        </div>
+        <div *ngIf="email.errors?.['email']">
+            <div class="alert alert-danger"
+                *ngIf="email.touched &&  email.invalid">
+                Email pattern not matched
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Feedback</label>
+        <textarea
+        type="text"
+        class="form-control"
+        name="feedback"
+        formControlName="feedback">
+        </textarea>
+        <div *ngIf="feedback.errors?.['required']">
+            <div class="alert alert-danger"
+                *ngIf="feedback.touched && feedback.invalid">
+                Feedback required
+            </div>
+        </div>
+        <div *ngIf="feedback.errors?.['minlength']">
+            <div class="alert alert-danger"
+                *ngIf="feedback.touched && feedback.invalid">  
+                Feedback not meeting minimum length 
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <button type="submit" [disabled] = "form.invalid">Submit</button>
+</form>
