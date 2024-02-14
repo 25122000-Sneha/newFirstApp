@@ -10,8 +10,7 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ArrayComponentComponent } from './array-component/array-component.component';
-import { SumitraComponentComponent } from './sumitra-component/sumitra-component.component';
-import { RamuComponentComponent } from './ramu-component/ramu-component.component';
+
 import { RoutingcomponentComponent } from './routingcomponent/routingcomponent.component';
 import { ArrayDetailsComponent } from './array-details/array-details.component';
 import { JackReacherComponent } from './jack-reacher/jack-reacher.component';
@@ -26,8 +25,6 @@ import { FournotfourComponent } from './fournotfour/fournotfour.component';
     FormComponent,
     ReactiveformComponent,
     ArrayComponentComponent,
-    SumitraComponentComponent,
-    RamuComponentComponent,
     RoutingcomponentComponent,
     ArrayDetailsComponent,
     JackReacherComponent,
